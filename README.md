@@ -6,5 +6,8 @@
 - Magaza kismi; Melek yapacak.
 - Banka kismi; Selin yapacak.
 
+- Kodlar herkesin kendi localinde, daha sonra main'e pushlanacak.
+- Cuma tekrar konusacagiz.
+
 
  
