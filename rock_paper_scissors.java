@@ -24,9 +24,9 @@ public class rock_paper_scissors extends Game {
         Random random = new Random();
         String[] secenekler = {"Taş", "Kağıt", "Makas"};
 
-        System.out.println(kurallari_yaz());
 
         while (true) {
+            System.out.println(kurallari_yaz());
             System.out.print("\nYatırmak istediğiniz miktarı girin: ");
             double yatirilanMiktar = input.nextDouble();
             para_yatir(yatirilanMiktar);
@@ -60,7 +60,7 @@ public class rock_paper_scissors extends Game {
             // input.nextLine() kullanarak önceki satırdaki boşluğu temizle
             input.nextLine();
 
-            System.out.print("\nOyundan çıkmak için q tuşuna basın : ");
+            System.out.print("\nÇıkmak için 'q' tuşuna basın, yeni oyun için herhangi bir tuşa");
             String devam = input.nextLine();
             if (devam.equalsIgnoreCase("q")) {
                 System.out.println("Oyun sonlandırıldı.");

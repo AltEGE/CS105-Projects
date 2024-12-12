@@ -21,9 +21,9 @@ public class HighDice extends Game {
         Scanner input = new Scanner(System.in);
         Random random = new Random();
 
-        System.out.println(kurallari_yaz());
 
         while (true) {
+            System.out.println(kurallari_yaz());
             System.out.print("\nYatırmak istediğiniz miktarı girin: ");
             double yatirilanMiktar = input.nextDouble();
             para_yatir(yatirilanMiktar);
@@ -47,7 +47,7 @@ public class HighDice extends Game {
             // input.nextLine() ile önceki boşluğu temizle
             input.nextLine();
 
-            System.out.print("\nOyuna devam etmek için 'q' girin, çıkmak için başka bir tuşa basın: ");
+            System.out.print("\nÇıkmak için 'q' tuşuna basın, yeni oyun için herhangi bir tuşa");
             String devam = input.nextLine();
             if (devam.equalsIgnoreCase("q")) {
                 System.out.println("Oyun sonlandırıldı.");

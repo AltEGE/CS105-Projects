@@ -26,9 +26,9 @@ public class Wheel extends  Game{
         double[] seçilen_çark;
 
         System.out.println("\nÇark Oyununa Hoş Geldiniz!");
-        System.out.println(kurallari_yaz());
 
         while (true) {
+            System.out.println(kurallari_yaz());
             System.out.print("Yatıracağınız miktarı girin: ");
             setYatirilan_para(input.nextDouble());
     
@@ -61,7 +61,7 @@ public class Wheel extends  Game{
             // input.nextLine() kullanarak önceki satırdaki boşluğu temizliyoruz
             input.nextLine();
     
-            System.out.print("\nOyundan çıkmak için q tuşuna basın : ");
+            System.out.print("\nÇıkmak için 'q' tuşuna basın, yeni oyun için herhangi bir tuşa");
             String devam = input.nextLine();
             if (devam.equalsIgnoreCase("q")) {
                 System.out.println("Oyun sonlandırıldı.");
