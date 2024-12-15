@@ -22,7 +22,9 @@ public class follow_the_lady extends Game {
         Random random = new Random();
 
         System.out.println(kurallari_yaz());
-
+        System.out.println("---------------------------------");
+        System.out.println("Muz coin'iniz : " + getMuz_coin());
+        System.out.println("---------------------------------");
         while (true) {
             System.out.print("\nYatırmak istediğiniz miktarı girin: ");
             double yatirilanMiktar = input.nextDouble();

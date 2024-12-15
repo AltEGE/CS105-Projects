@@ -26,9 +26,11 @@ public class Wheel extends  Game{
         double[] seçilen_çark;
 
         System.out.println("\nÇark Oyununa Hoş Geldiniz!");
-
+        System.out.println(kurallari_yaz());
+        System.out.println("---------------------------------");
+        System.out.println("Muz coin'iniz : " + getMuz_coin());
+        System.out.println("---------------------------------");
         while (true) {
-            System.out.println(kurallari_yaz());
             System.out.print("Yatıracağınız miktarı girin: ");
             setYatirilan_para(input.nextDouble());
     

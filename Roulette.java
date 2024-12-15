@@ -66,6 +66,9 @@ public class Roulette extends Game {
             topkazanc = 0;
 
             System.out.println(kurallari_yaz());
+            System.out.println("---------------------------------");
+            System.out.println("Muz coin'iniz : " + getMuz_coin());
+            System.out.println("---------------------------------");
 
             while (true) {
                 System.out.print("Lütfen bahisinizi nereye yapacağınızı seçin (Sayı/Renk/Aralık): ");

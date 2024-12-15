@@ -23,10 +23,12 @@ public class rock_paper_scissors extends Game {
         Scanner input = new Scanner(System.in);
         Random random = new Random();
         String[] secenekler = {"Taş", "Kağıt", "Makas"};
-
+        System.out.println(kurallari_yaz());
+        System.out.println("---------------------------------");
+        System.out.println("Muz coin'iniz : " + getMuz_coin());
+        System.out.println("---------------------------------");
 
         while (true) {
-            System.out.println(kurallari_yaz());
             System.out.print("\nYatırmak istediğiniz miktarı girin: ");
             double yatirilanMiktar = input.nextDouble();
             para_yatir(yatirilanMiktar);

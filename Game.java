@@ -2,17 +2,31 @@ public abstract class Game {
 
     private double muz_coin;
     private double yatirilan_para;
+    protected boolean blackjack;
 
     public Game (double muz_coin){
         this.muz_coin = muz_coin;
     }
           
     public   void  win(double oran){
-        double kazanc = getYatirilan_para() * oran;
+        double kazanc = this.yatirilan_para * oran;
         this.muz_coin = this.muz_coin + kazanc;
         System.out.println("Kazancınız: " + kazanc);
         System.out.println("Güncel muz coin bakiyeniz: " + this.muz_coin);
     };
+
+
+    public void win_blackjake(double oran){
+        if(blackjack){
+            double kazanc = this.yatirilan_para/2 * oran;
+            this.muz_coin = this.muz_coin + kazanc;
+        } 
+        else{
+            double kazanc = this.yatirilan_para * oran;
+            this.muz_coin = this.muz_coin + kazanc;
+        }
+        System.out.println("Güncel muz coin bakiyeniz: " + this.muz_coin);
+    }
 
     public abstract String kurallari_yaz();
     
