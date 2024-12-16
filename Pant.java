@@ -1,9 +1,11 @@
 public class Pant extends Abstract_Clothes{
     private String bodyPart = "Lower Body";
     private String model = "Jean";
+    private int ID = 3;
 
-    public Pant(double price , String color) {
-        super(price, color);
+    public Pant(double price , String color , int ID)
+    {
+        super(price, color, ID);
     }
     public String getModel(){
         return model;

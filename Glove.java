@@ -1,12 +1,14 @@
-public class Skirt extends Abstract_Clothes{
-    private String bodyPart = "Lower Body";
-    private String model = "Skirt";
-    private int ID = 4;
+public class Glove extends Abstract_Clothes{
+    private String bodyPart = " Hand Part";
+    private String model = "Glove";
+    private int ID = 7;
 
-    public Skirt (double price,String color, int ID){
-        super(price,color, ID);
+
+    public Glove (double price,String color, int ID) {
+        super(price, color, ID);
 
     }
+
     public String getModel(){
         return model;
 
@@ -17,8 +19,10 @@ public class Skirt extends Abstract_Clothes{
     }
 
     @Override
-    public void getInfo(){
+    public void getInfo () {
         System.out.println("Your item is " + color + " " + model + "\n"
                 + "Model price is " + price + "\n");
+
     }
 }
+

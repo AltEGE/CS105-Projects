@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a262de9e-e718-4840-8584-1edebbec2582" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+    <list default="true" id="a262de9e-e718-4840-8584-1edebbec2582" name="Changes" comment="Store part of the game pushed. Clothes class created.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abstract_Clothes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Abstract_Clothes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glasses.java" beforeDir="false" afterPath="$PROJECT_DIR$/Glasses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hat.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pant.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shoe.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shoe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skirt.java" beforeDir="false" afterPath="$PROJECT_DIR$/Skirt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tshirt.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tshirt.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,15 +35,45 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MelekCetinel"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/AltEGE/CS105-Projects.git",
+    "accountId": "d39773c6-d642-4c52-88f8-f5fb265d4e6a"
+  }
+}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2qJdXIq0b5TNLu18DVVYZ2BW92N" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "MelekCetinel",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap"
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
@@ -46,30 +84,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="CS105-Projects" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="CS105-Projects" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="Store part of the game pushed. Clothes class created.">
+      <option name="closed" value="true" />
+      <created>1734033527881</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1734033527881</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a262de9e-e718-4840-8584-1edebbec2582" name="Changes" comment="Store part of the game pushed. Clothes class created." />
+      <created>1734384650012</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1734384650012</updated>
+      <workItem from="1734384651138" duration="782000" />
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Store part of the game pushed. Clothes class created." />
+    <option name="LAST_COMMIT_MESSAGE" value="Store part of the game pushed. Clothes class created." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

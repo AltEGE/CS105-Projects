@@ -1,12 +1,14 @@
-public class Skirt extends Abstract_Clothes{
-    private String bodyPart = "Lower Body";
-    private String model = "Skirt";
-    private int ID = 4;
+public class Shoe extends Abstract_Clothes{
+    private String bodyPart = "Feet Part";
+    private String model = "Shoe";
+    private int ID = 6;
 
-    public Skirt (double price,String color, int ID){
-        super(price,color, ID);
+    public Shoe(double price,String color, int ID) {
+        super(price, color, ID);
+
 
     }
+
     public String getModel(){
         return model;
 

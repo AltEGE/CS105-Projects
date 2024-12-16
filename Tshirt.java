@@ -1,9 +1,10 @@
 public class Tshirt extends Abstract_Clothes{
     private String bodyPart = "Upper Body";
     private String model = "Tshirt";
+    private int ID = 5;
 
-    public Tshirt( double price , String color) {
-        super(price, color);
+    public Tshirt( double price , String color, int ID) {
+        super(price, color, ID);
 
     }
     public String getModel(){

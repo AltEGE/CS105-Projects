@@ -1,9 +1,10 @@
 public class Hat extends Abstract_Clothes{
     private String bodyPart = "Head Body";
     private String model = "Hat";
+    private int ID = 2;
 
-    public Hat (double price,String color) {
-        super(price, color);
+    public Hat (double price,String color, int ID) {
+        super(price, color, ID);
 
     }
     public String getModel(){

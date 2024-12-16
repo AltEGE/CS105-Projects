@@ -1,9 +1,10 @@
 public class Glasses extends Abstract_Clothes{
     private String bodyPart = "Head Body";
     private String model = "Glasses";
+    private int ID = 1;
 
-    public Glasses(double price, String color){
-        super(price, color);
+    public Glasses(double price, String color, int ID){
+        super(price, color, ID);
 
 
     }
