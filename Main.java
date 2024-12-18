@@ -154,12 +154,43 @@ public class Main {
                     if (!sifre.equals(sifre_2)) {
                         System.out.println("Şifreler eşleşmedi, lütfen tekrar girin.");
                     } else {
+
+                        while(true){
+                            System.out.println("Please select character gender\n" +
+                            "1..Male\n" +
+                            "2..Woman");
+                            int x = input.nextInt();
+
+                            if ( x == 1) {
+                                gender = "Male";
+                                break;
+                            }
+
+                            else if(x == 2){
+                                gender = "Woman";
+                                break;
+                            }
+                            else{
+                                System.out.println("Lütfen geçerli bir değer girin");
+                            }
+
+                        }
+
                         System.out.println("Kayıt işlemi başarılı");
                         System.out.println("Hoşgeldin " + ad);
                         yeni_kullanıcı = true;
-                        muz_coin = 1000;
-                        gender = "Unspecified";
-                        GüncelleVeKapat(ad, sifre, muz_coin, gender, clothes, character_clothes, yeni_kullanıcı);
+                        System.out.println("Etrafı Gösterelim mi (Ödüllü olabilir) kabul etmek için e'ye basın");
+                        String yes = input.nextLine();
+
+                        if (yes.equalsIgnoreCase("e")) {
+                            System.out.println("Uygulmamamıza kayıt olduğunuz için teşekkür ederiz. Ekranda görünen bölümlere gitmek için yanında yazan sayıyı girebilirsiniz eğer bir önceki sayfaya dönmek isterseniz lütfen q tuşuna basınız. Programı kapatmak içinde -+-'yi tuşlayın\n"
+                            + "Başkanımız Banana Joe oynadığınız oyunlardan belli oranda vergi alabilir, yaşasın Muz Cumhuriyeti");                            
+                            System.out.println("Tebrikler 1000 muz_coin kazandınız");
+                            muz_coin = 1000;
+                            
+                        }
+
+
                         break;
                     }
                 }
