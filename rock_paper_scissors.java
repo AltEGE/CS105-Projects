@@ -29,6 +29,11 @@ public class rock_paper_scissors extends Game {
         System.out.println("---------------------------------");
 
         while (true) {
+        
+            System.out.println("---------------------------------");
+            System.out.println("Muz coin'iniz : " + getMuz_coin());
+            System.out.println("---------------------------------");
+    
             System.out.print("\nYatırmak istediğiniz miktarı girin: ");
             double yatirilanMiktar = input.nextDouble();
             para_yatir(yatirilanMiktar);

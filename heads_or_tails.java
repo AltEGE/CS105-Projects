@@ -21,11 +21,15 @@ public class heads_or_tails extends Game {
         Scanner input = new Scanner(System.in);
         Random random = new Random();
         System.out.println(kurallari_yaz());
-        System.out.println("---------------------------------");
-        System.out.println("Muz coin'iniz : " + getMuz_coin());
-        System.out.println("---------------------------------");
+
 
         while (true) {
+
+            System.out.println("---------------------------------");
+            System.out.println("Muz coin'iniz : " + getMuz_coin());
+            System.out.println("---------------------------------");
+    
+
             System.out.print("\nYatırmak istediğiniz miktarı girin: ");
             double yatirilanMiktar = input.nextDouble();
             para_yatir(yatirilanMiktar);
