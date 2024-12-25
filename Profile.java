@@ -1,5 +1,3 @@
-
-
 import java.util.ArrayList;
 
 public class Profile {
@@ -7,108 +5,104 @@ public class Profile {
     private String username;
     private String password;
     private String gender;
-    private double muzCoin; 
+    private double muzCoin;
 
-    private ArrayList<String> dolap;
-    private ArrayList<String> karakterUstu;
+    private ArrayList<String> wardrobe;
+    private ArrayList<String> equippedItems;
 
-    private ArrayList<Integer> dolapID;
-    private ArrayList<Integer> karakterUstuID;
+    private ArrayList<Integer> wardrobeIDs;
+    private ArrayList<Integer> equippedItemIDs;
 
-    public Profile(String username, String password, String gender, double muzCoin, ArrayList<Integer> dolapID, ArrayList<Integer> karakterUstuID, ArrayList<Abstract_Clothes> kıyafetler){
+    public Profile(String username, String password, String gender, double muzCoin, ArrayList<Integer> wardrobeIDs, ArrayList<Integer> equippedItemIDs, ArrayList<Abstract_Clothes> clothes) {
         this.username = username;
         this.password = password;
         this.gender = gender;
         this.muzCoin = muzCoin;
-        this.dolapID = dolapID;
-        this.karakterUstuID = karakterUstuID;
-        IdCeviri(this.dolapID,this.dolap,kıyafetler);
-        IdCeviri(this.karakterUstuID, this.karakterUstu, kıyafetler);
 
+        this.wardrobeIDs = new ArrayList<>(wardrobeIDs);
+        this.equippedItemIDs = new ArrayList<>(equippedItemIDs);
+        this.wardrobe = new ArrayList<>();
+        this.equippedItems = new ArrayList<>();
 
+        convertIDsToNames(this.wardrobeIDs, this.wardrobe, clothes);
+        convertIDsToNames(this.equippedItemIDs, this.equippedItems, clothes);
     }
 
-    public void  IdCeviri(ArrayList<Integer> ID, ArrayList<String> cıktı ,ArrayList<Abstract_Clothes> kıyafetler){
-
-        for (int i = 0; i == ID.size()-1; i++) {
-            for (int j = 0; j  == kıyafetler.size()-1; j ++) {
-                
-                if(ID.get(i) == kıyafetler.get(j).getID()){
-                    cıktı.add(kıyafetler.get(j).getName());
+    private void convertIDsToNames(ArrayList<Integer> IDs, ArrayList<String> output, ArrayList<Abstract_Clothes> clothes) {
+        for (int id : IDs) {
+            for (Abstract_Clothes item : clothes) {
+                if (item.getID() == id) {
+                    output.add(item.getName());
                 }
-            }            
-        }
-    }
-
-    public void dolapEkle(int id, ArrayList<Abstract_Clothes> kıyafetler) {
-        for (Abstract_Clothes kıyafet : kıyafetler) {
-            if (kıyafet.getID() == id) {
-                dolapID.add(id);
-                dolap.add(kıyafet.getName());
-                System.out.println(kıyafet.getName() + " dolaba eklendi.");
-                return;
             }
         }
     }
 
-    public void karakterUstuEkle(int id, ArrayList<Abstract_Clothes> kıyafetler) {
-        for (Abstract_Clothes kıyafet : kıyafetler) {
-            if (kıyafet.getID() == id) {
-                karakterUstuID.add(id);
-                karakterUstu.add(kıyafet.getName());
-                System.out.println(kıyafet.getName() + " karakter üstüne eklendi.");
+    public void addToWardrobe(int id, ArrayList<Abstract_Clothes> clothes) {
+        for (Abstract_Clothes item : clothes) {
+            if (item.getID() == id) {
+                wardrobeIDs.add(id);
+                wardrobe.add(item.getName());
+                System.out.println(item.getName() + " has been added to the wardrobe.");
                 return;
             }
         }
+        System.out.println("Item with ID " + id + " not found.");
     }
 
-    public void karakterUstuCikar(int id) {
-        int index = karakterUstuID.indexOf(id);
+    public void equipItem(int id, ArrayList<Abstract_Clothes> clothes) {
+        for (Abstract_Clothes item : clothes) {
+            if (item.getID() == id) {
+                equippedItemIDs.add(id);
+                equippedItems.add(item.getName());
+                System.out.println(item.getName() + " has been equipped.");
+                return;
+            }
+        }
+        System.out.println("Item with ID " + id + " not found.");
+    }
+
+    public void unequipItem(int id) {
+        int index = equippedItemIDs.indexOf(id);
         if (index != -1) {
-            System.out.println(karakterUstu.get(index) + " karakter üstünden çıkarıldı.");
-            karakterUstuID.remove(index);
-            karakterUstu.remove(index);
-        } 
-    }
-
-    public void dolapGoruntule() {
-        System.out.println("Dolap İçeriği:");
-        if (dolap.isEmpty()) {
-            System.out.println("  - Dolap boş.");
+            System.out.println(equippedItems.get(index) + " has been unequipped.");
+            equippedItemIDs.remove(index);
+            equippedItems.remove(index);
         } else {
-            for (String item : this.dolap) {
-                System.out.println("  - " + item);
-            }
+            System.out.println("Item with ID " + id + " is not equipped.");
         }
     }
-    
-    public void karakterUstuGoruntule() {
-        System.out.println("Karakter Üstü İçeriği:");
-        if (karakterUstu.isEmpty()) {
-            System.out.println("  - Karakter üstü boş.");
+
+    public void viewWardrobe() {
+        System.out.println("Wardrobe Contents:");
+        if (wardrobe.isEmpty()) {
+            System.out.println("  - Wardrobe is empty.");
         } else {
-            for (String item : this.karakterUstu) {
+            for (String item : wardrobe) {
                 System.out.println("  - " + item);
             }
         }
     }
 
-    public void isimdenIDCevir(ArrayList<String> isimler, ArrayList<Integer> çıktı, ArrayList<Abstract_Clothes> kıyafetler) { //Kodu kapatırken kullanılacak
-        for (String isim : isimler) {
-            for (Abstract_Clothes kıyafet : kıyafetler) {
-                if (isim.equalsIgnoreCase(kıyafet.getName())) {
-                    çıktı.add(kıyafet.getID());
+    public void viewEquippedItems() {
+        System.out.println("Equipped Items:");
+        if (equippedItems.isEmpty()) {
+            System.out.println("  - No items equipped.");
+        } else {
+            for (String item : equippedItems) {
+                System.out.println("  - " + item);
+            }
+        }
+    }
+
+    public void convertNamesToIDs(ArrayList<String> names, ArrayList<Integer> output, ArrayList<Abstract_Clothes> clothes) {
+        for (String name : names) {
+            for (Abstract_Clothes item : clothes) {
+                if (name.equalsIgnoreCase(item.getName())) {
+                    output.add(item.getID());
                 }
             }
         }
     }
-    
-
-
-
-
-
-
-
 }
 
