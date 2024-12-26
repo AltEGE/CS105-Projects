@@ -54,7 +54,6 @@ public class Bank {
                 System.out.println("Invalid selection! Please try again.");
             }
         }
-        scanner.close(); // Close the Scanner instance
     }
 
     // Reading user selection
