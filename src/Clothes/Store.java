@@ -1,6 +1,6 @@
-package Clothes;
+package src.Clothes;
 
-import User.Profile;
+import src.User.Profile;
 
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
@@ -18,7 +18,6 @@ public class Store {
     public void display_store_list(){
         for (Abstract_Clothes c : clothesList) {
             c.getInfo();
-            System.out.println("-------------------------------------");
         }
     }
 
@@ -41,7 +40,7 @@ public class Store {
                 System.out.println("You have $" + c.getPrice());
                 System.out.println("***************************************");
                 this.clothesList.remove(c);
-                user.add_clothes(c);
+                user.buy_clothes(c);
             } else {
                 System.out.println("You don't have enough money to buy this cloth.");
             }
