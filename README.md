@@ -1,10 +1,10 @@
 Introduction to Object-Oriented Programming
 
-Banana Republic Character Dressing Game
-A humorous and engaging game inspired by the fictional Banana Republic, designed for the CS105 course project.
+Banana Republic (Character Dressing & Games)
+It is a humorous and engaging game inspired by the fictional Banana Republic, designed for the CS105 course project.
 
 Overview
-The Banana Republic Character Dressing Game is a playful online game where users can create accounts, play games to earn chips, buy clothing for their characters, and manage their accounts through the Banana Republic's unique financial system.
+The Banana Republic Game is a playful online game where users can create accounts, play games to earn chips, buy clothing for their characters, and manage their accounts through the Banana Republic's unique financial system.
 
 Features
 
