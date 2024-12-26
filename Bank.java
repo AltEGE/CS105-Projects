@@ -13,7 +13,7 @@ public class Bank {
             System.out.println("Cipiniz: " + cipMiktari);
             System.out.println("Coin İşlemleri:");
             for (int i = 0; i < coinFiyatlari.length; i++) {
-                System.out.println((i + 1) + ". X Muz Coin - Fiyat: " + coinFiyatlari[i] + ", Miktar: " + coinMiktarlari[i]);
+                System.out.println((i + 1) + ".  Muz Coin - Fiyat: " + coinFiyatlari[i] + ", Miktar: " + coinMiktarlari[i]);
             }
             System.out.println((coinFiyatlari.length + 1) + ". Geri Dön");
             System.out.println((coinFiyatlari.length + 2) + ". Flash Muz Joe Kredisi");
@@ -28,7 +28,7 @@ public class Bank {
 
                 if (cipMiktari >= fiyat) {
                     cipMiktari -= fiyat;
-                    System.out.println("Başarıyla " + miktar + " adet X Muz Coin satın aldınız. Kalan Cipiniz: " + cipMiktari);
+                    System.out.println("Başarıyla " + miktar + " adet  Muz Coin satın aldınız. Kalan Cipiniz: " + cipMiktari);
                 } else {
                     System.out.println("Yetersiz cip! Lütfen daha fazla cip yükleyin.");
                 }
