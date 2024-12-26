@@ -1,4 +1,4 @@
-package Clothes;
+package src.Clothes;
 
 public abstract class Abstract_Clothes {
     protected double price;
@@ -19,6 +19,7 @@ public abstract class Abstract_Clothes {
         System.out.println("ID : " + ID + "\n"
                 + "Your item is " + color + " " + model + "\n"
                 + "Model price is " + price );
+        System.out.println("-------------------------------------");
     }
 
 
