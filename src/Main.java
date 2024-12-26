@@ -1,4 +1,5 @@
 
+import src.Bank.Bank;
 import src.Clothes.*;
 import src.DataBases.DataLoader;
 import src.DataBases.DataSaver;
@@ -18,8 +19,8 @@ public class Main {
 
     public static void playGameMenu(Scanner scanner, Profile profile){
         System.out.println("Game Menu : \n"
-                        + " 1 - Rock Paper Scissors !\n"
-                        + " 0 - Back Main Menu\n"
+                + " 1 - Rock Paper Scissors !\n"
+                + " 0 - Back Main Menu\n"
         );
 
         int option = scanner.nextInt();
@@ -30,13 +31,14 @@ public class Main {
                 break;
         }
     }
-    public static void mainMenu(Scanner scanner, Profile profile, Store store){
+    public static void mainMenu(Scanner scanner, Profile profile, Store store, Bank bank){
         System.out.println("Main Menu : \n"
-                        + "1 - Visit Inventory\n"
-                        + "2 - Visit Store\n"
-                        + "3 - Change Clothes\n"
-                        + "4 - Play Game\n"
-                        + "0 - Exit\n"
+                + "1 - Visit Inventory\n"
+                + "2 - Visit Store\n"
+                + "3 - Change Clothes\n"
+                + "4 - Play Game\n"
+                + "5 - Bank\n"
+                + "0 - Exit\n"
         );
 
         int option = scanner.nextInt();
@@ -59,6 +61,9 @@ public class Main {
             case 4:
                 playGameMenu(scanner, profile);
                 break;
+            case 5:
+                bank.run();
+                break;
         }
     }
 
@@ -69,12 +74,13 @@ public class Main {
 
         Profile profile = game_builder.getProfile();
         Store store = game_builder.getStore();
+        Bank bank = new Bank(profile);
 
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Welcome to Banana Republic");
         while(true){
-            mainMenu(scanner, profile, store);
+            mainMenu(scanner, profile, store, bank);
         }
 
 
