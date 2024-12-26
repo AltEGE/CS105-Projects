@@ -1,6 +1,6 @@
-package DataBases;
-import Clothes.Store;
-import User.Profile;
+package src.DataBases;
+import src.Clothes.Store;
+import src.User.Profile;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -16,7 +16,9 @@ public class DataLoader {
     private File store_file;
     private Scanner scanner;
 
-    public DataLoader(){
+    public DataLoader(){}
+
+    public void loadData(){
         this.readProfileFile();
         this.readStoreFile();
     }
@@ -25,7 +27,7 @@ public class DataLoader {
         ArrayList<Object> intList = new ArrayList<>();
 
         for (String numStr : stringNumbers) {
-            intList.add(Integer.parseInt(numStr.trim()));
+            intList.add(Integer.parseInt(numStr.trim())); // String'i integer'a çevir ve listeye ekle
         }
         return intList;
     }
