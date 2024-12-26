@@ -1,6 +1,6 @@
-package User;
+package src.User;
 
-import Clothes.Abstract_Clothes;
+import src.Clothes.Abstract_Clothes;
 
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
@@ -15,14 +15,20 @@ public class Inventory {
     public void display_inventory(){
         for (Abstract_Clothes c : clothesList) {
             c.getInfo();
-            System.out.println("-------------------------------------");
         }
+    }
+
+    public ArrayList get_inventory_ids(){
+        ArrayList inventory_ids = new ArrayList();
+        for (Abstract_Clothes c : clothesList) {
+            inventory_ids.add(c.getID());
+        }
+        return inventory_ids;
     }
 
     public Abstract_Clothes get_clothes(int id){
         for (Abstract_Clothes c : clothesList) {
             if (c.getID() == id) {
-                clothesList.remove(c);
                 return c;
             }
         }
