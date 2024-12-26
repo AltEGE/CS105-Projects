@@ -6,7 +6,7 @@ Features
 
 User Management:
 
-New users can register with a nickname and gender. Existing users can log in and manage their profiles. Games:
+The user's data is loaded when the application is opened and saved when the game is closed. Users can log in and manage their profiles. Games:
 
 Play a variety of mini-games like: Blackjack, High Roll, Roulette, Rock-Paper-Scissors, Card Matching. Trying to earn chips by winning games.
 
