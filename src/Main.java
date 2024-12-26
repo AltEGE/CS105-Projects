@@ -33,32 +33,32 @@ public class Main {
 
         switch(option){
             case 1:
-                Games game = new RockPaperScissors(profile);
-                game.play();
+                Games game1 = new RockPaperScissors(profile);
+                game1.play();
                 break;
             case 2:
-                game = new Heads_or_tails(profile);
-                game.play();
+                Games game2 = new Heads_or_tails(profile);
+                game2.play();
                 break;
             case 3:
-                game = new HighDice(profile);
-                game.play();
+                Games game3 = new HighDice(profile);
+                game3.play();
                 break;
             case 4:
-                game = new Roulette(profile);
-                game.play();
+                Games game4 = new Roulette(profile);
+                game4.play();
                 break;
             case 5:
-                game = new Wheel(profile);
-                game.play();
+                Games game5 = new Wheel(profile);
+                game5.play();
                 break;
             case 6:
-                game = new Follow_the_lady(profile);
-                game.play();
+                Games game6 = new Follow_the_lady(profile);
+                game6.play();
                 break;
             case 7:
-                game = new Blackjack(profile);
-                game.play();
+                Games game7 = new Blackjack(profile);
+                game7.play();
                 break;
             case 0:
                 System.out.println("Returning to the main menu...");
