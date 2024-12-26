@@ -1,11 +1,11 @@
 
-import Clothes.*;
-import DataBases.DataLoader;
-import DataBases.DataSaver;
-import DataBases.GameBuilder;
-import Games.Games;
-import Games.RockPaperScissors;
-import User.Profile;
+import src.Clothes.*;
+import src.DataBases.DataLoader;
+import src.DataBases.DataSaver;
+import src.DataBases.GameBuilder;
+import src.Games.Games;
+import src.Games.RockPaperScissors;
+import src.User.Profile;
 
 import java.security.cert.CertStoreSpi;
 import java.util.Scanner;
@@ -34,7 +34,8 @@ public class Main {
         System.out.println("Main Menu : \n"
                         + "1 - Visit Inventory\n"
                         + "2 - Visit Store\n"
-                        + "3 - Play Game\n"
+                        + "3 - Change Clothes\n"
+                        + "4 - Play Game\n"
                         + "0 - Exit\n"
         );
 
@@ -53,7 +54,11 @@ public class Main {
                 store.visit_store(profile);
                 break;
             case 3:
+                profile.wear_clothes();
+                break;
+            case 4:
                 playGameMenu(scanner, profile);
+                break;
         }
     }
 
