@@ -27,7 +27,10 @@ public class Main {
                 + "0 - Back Main Menu\n"
         );
 
+        System.out.print("Please enter the tab you want to go to: ");
         int option = scanner.nextInt();
+        System.out.println("--------------------------------------------------------");
+
         switch(option){
             case 1:
                 Games game = new RockPaperScissors(profile);
@@ -74,7 +77,10 @@ public class Main {
                         + "0 - Exit\n"
         );
 
+        System.out.print("Please enter the tab you want to go to: ");
         int option = scanner.nextInt();
+        System.out.println("--------------------------------------------------------");
+
         switch(option){
             case 0:
                 DataSaver data_saver = new DataSaver();
