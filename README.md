@@ -16,13 +16,8 @@ Existing users can log in and manage their profiles.
 Games:
 
 Play a variety of mini-games like:
-Blackjack
+Blackjack, High Roll, Roulette, Rock-Paper-Scissors, Card Matching. Trying to earn chips by winning games. 
 
-High Roll
-Roulette
-Rock-Paper-Scissors
-Card Matching
-Earn chips by winning games.
 
 Store:
 
@@ -31,7 +26,7 @@ Real-time updates to your character’s appearance with purchased items.
 
 Banking System:
 
-Deposit funds and manage your finances in the Banana Joe State Bank.
+Deposit funds and manage your finances at Banana Joe State Bank.
 Exchange currencies and apply for high-interest loans with a 200% annual rate.
 Transparent transaction confirmations and cancellation options.
 
@@ -42,7 +37,7 @@ A sense of humor to enjoy the quirky Banana Republic setting.
 
 How to Play
 
-Register as a new user or log in with an existing account.
+Register as a new user or login with an existing account.
 Choose Your Character:
 Select your character's gender from predefined options.
 Play Games to earn chips.
