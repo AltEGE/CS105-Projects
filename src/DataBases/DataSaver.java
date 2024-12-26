@@ -1,6 +1,6 @@
-package DataBases;
-import User.Profile;
-import Clothes.Store;
+package src.DataBases;
+import src.User.Profile;
+import src.Clothes.Store;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -30,4 +30,5 @@ public class DataSaver {
             e.printStackTrace();
         }
     }
+
 }

@@ -1,6 +1,6 @@
-package Games;
+package src.Games;
 
-import User.Profile;
+import src.User.Profile;
 
 import java.util.Random;
 import java.util.Scanner;

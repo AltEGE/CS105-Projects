@@ -1,4 +1,4 @@
-package Clothes;
+package src.Clothes;
 
 public class Tshirt extends Abstract_Clothes {
     public Tshirt( double price , String color, int ID) {

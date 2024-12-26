@@ -1,4 +1,4 @@
-package Clothes;
+package src.Clothes;
 
 public class Glasses extends Abstract_Clothes {
 
