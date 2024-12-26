@@ -2,100 +2,103 @@ import java.util.Scanner;
 
 public class Bank {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in); // Tek bir Scanner nesnesi
-        int cipMiktari = 1000;
-        int[] coinFiyatlari = {50, 100, 150, 200, 250, 300, 350, 400, 450};
-        int[] coinMiktarlari = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        boolean devam = true;
+        Scanner scanner = new Scanner(System.in); 
 
-        while (devam) {
-            System.out.println("\n--- Muz Cumhuriyeti ---");
-            System.out.println("Cipiniz: " + cipMiktari);
-            System.out.println("Coin İşlemleri:");
-            for (int i = 0; i < coinFiyatlari.length; i++) {
-                System.out.println((i + 1) + ".  Muz Coin - Fiyat: " + coinFiyatlari[i] + ", Miktar: " + coinMiktarlari[i]);
+        System.out.print("Enter your starting coin amount: ");
+        double coin = scanner.nextDouble();
+        int[] coinPrices = {50, 100, 150, 200, 250, 300, 350, 400, 450};
+        int[] coinAmounts = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        boolean continueProgram = true;
+
+        while (continueProgram) {
+            System.out.println("\n--- Banana Republic ---");
+            System.out.println("Coins: " + profile.getCoin());
+            System.out.println("Coin Transactions:");
+            for (int i = 0; i < coinPrices.length; i++) {
+                System.out.println((i + 1) + ".  Banana Coin - Price: " + coinPrices[i] + ", Amount: " + coinAmounts[i]);
             }
-            System.out.println((coinFiyatlari.length + 1) + ". Geri Dön");
-            System.out.println((coinFiyatlari.length + 2) + ". Flash Muz Joe Kredisi");
-            System.out.println((coinFiyatlari.length + 3) + ". Muz Cumhuriyeti Banana Joe Devlet Bankası");
-            System.out.print("Seçiminizi yapınız: ");
+            System.out.println((coinPrices.length + 1) + ". Return");
+            System.out.println((coinPrices.length + 2) + ". Flash Banana Joe Credit");
+            System.out.println((coinPrices.length + 3) + ". Banana Republic Joe State Bank");
+            System.out.print("Please make your selection: ");
 
-            int secim = okuSecim(scanner);
+            int choice = readSelection(scanner);
 
-            if (secim >= 1 && secim <= coinFiyatlari.length) { // Coin Satın Alma
-                int fiyat = coinFiyatlari[secim - 1];
-                int miktar = coinMiktarlari[secim - 1];
+            if (choice >= 1 && choice <= coinPrices.length) { // Coin Purchase
+                int price = coinPrices[choice - 1];
+                int amount = coinAmounts[choice - 1];
 
-                if (cipMiktari >= fiyat) {
-                    cipMiktari -= fiyat;
-                    System.out.println("Başarıyla " + miktar + " adet  Muz Coin satın aldınız. Kalan Cipiniz: " + cipMiktari);
+                if (profile.getCoin() >= price) {
+                    profile.setCoin(profile.getCoin() - price);
+                    System.out.println("Successfully purchased " + amount + " Banana Coins. Remaining Coins: " + profile.getCoin());
                 } else {
-                    System.out.println("Yetersiz cip! Lütfen daha fazla cip yükleyin.");
+                    System.out.println("Insufficient coins! Please reload your coins.");
                 }
-            } else if (secim == coinFiyatlari.length + 1) {
-                System.out.println("Geri dönülüyor...");
-                devam = false;
-            } else if (secim == coinFiyatlari.length + 2) {
-                flashMuzJoeKredisi(scanner);
-            } else if (secim == coinFiyatlari.length + 3) {
-                muzCumhuriyetiBankasi();
+            } else if (choice == coinPrices.length + 1) {
+                System.out.println("Returning...");
+                continueProgram = false;
+            } else if (choice == coinPrices.length + 2) {
+                flashBananaJoeCredit(scanner, profile);
+            } else if (choice == coinPrices.length + 3) {
+                bananaRepublicBank();
             } else {
-                System.out.println("Geçersiz seçim! Tekrar deneyin.");
+                System.out.println("Invalid selection! Please try again.");
             }
         }
-        scanner.close(); // Scanner'ı kapatıyoruz
+        scanner.close(); // Close the Scanner instance
     }
 
-    // Kullanıcıdan seçim okuma
-    public static int okuSecim(Scanner scanner) {
-        System.out.print("Lütfen bir seçim yapınız: ");
-        while (!scanner.hasNextInt()) { // Giriş geçerli bir sayı mı kontrolü
-            System.out.println("Hatalı giriş! Lütfen geçerli bir sayı girin.");
-            scanner.next(); // Geçersiz girdiyi temizle
+    // Reading user selection
+    public static int readSelection(Scanner scanner) {
+        System.out.print("Please enter your selection: ");
+        while (!scanner.hasNextInt()) { // Check if input is a valid integer
+            System.out.println("Invalid input! Please enter a valid number.");
+            scanner.next(); // Clear invalid input
         }
         return scanner.nextInt();
     }
 
-    // Flash Muz Joe Kredisi
-    public static void flashMuzJoeKredisi(Scanner scanner) {
-        double faizOrani = 2.0; // Faiz oranı %200
+    // Flash Banana Joe Credit
+    public static void flashBananaJoeCredit(Scanner scanner, Profile profile) {
+        double interestRate = 2.0; // Interest rate 200%
 
-        System.out.println("\n=== Flash Muz Joe Kredisi ===");
-        System.out.print("İstediğiniz kredi miktarını giriniz: ");
+        System.out.println("\n=== Flash Banana Joe Credit ===");
+        System.out.print("Enter the desired credit amount: ");
         while (!scanner.hasNextDouble()) {
-            System.out.println("Hatalı giriş! Lütfen geçerli bir sayı girin.");
-            scanner.next(); // Geçersiz girdiyi temizle
+            System.out.println("Invalid input! Please enter a valid number.");
+            scanner.next(); // Clear invalid input
         }
-        double anapara = scanner.nextDouble();
+        double principal = scanner.nextDouble();
 
-        System.out.print("Kaç ayda ödeyeceksiniz: ");
+        System.out.print("How many months will you pay back?: ");
         while (!scanner.hasNextInt()) {
-            System.out.println("Hatalı giriş! Lütfen geçerli bir sayı girin.");
-            scanner.next(); // Geçersiz girdiyi temizle
+            System.out.println("Invalid input! Please enter a valid number.");
+            scanner.next(); // Clear invalid input
         }
-        int vade = scanner.nextInt();
+        int term = scanner.nextInt();
 
-        double toplamOdeme = anapara * (1 + faizOrani) * vade;
+        double totalPayment = principal * (1 + interestRate) * term;
 
-        System.out.println("Toplam Ödenecek Tutar: " + toplamOdeme + " Muz Coin");
-        System.out.println("[1] Onayla");
-        System.out.println("[2] İptal");
-        System.out.print("Seçiminizi yapınız: ");
+        System.out.println("Total Amount to be Paid: " + totalPayment + " Coins");
+        System.out.println("[1] Confirm");
+        System.out.println("[2] Cancel");
+        System.out.print("Please make your selection: ");
 
-        int secim = okuSecim(scanner);
-        if (secim == 1) {
-            System.out.println("Kredi onaylandı! Ana menüye dönülüyor.");
+        int choice = readSelection(scanner);
+        if (choice == 1) {
+            profile.setCoin(profile.getCoin() + principal);
+            System.out.println("Credit approved! Coins added: " + principal + ". Returning to main menu.");
         } else {
-            System.out.println("Kredi işlemi iptal edildi. Ana menüye dönülüyor.");
+            System.out.println("Credit operation canceled. Returning to main menu.");
         }
     }
 
-    // Muz Cumhuriyeti Bankası
-    public static void muzCumhuriyetiBankasi() {
-        System.out.println("\n=== Muz Cumhuriyeti Banana Joe Devlet Bankası ===");
-        System.out.println("Bu ülkede başka banka bulunmamaktadır.");
-        System.out.println("Muz Cumhuriyeti yasalarına göre tüm finans işlemleri buradan yapılır.");
-        System.out.println("Ana menüye dönülüyor...");
+    // Banana Republic Bank
+    public static void bananaRepublicBank() {
+        System.out.println("\n=== Banana Republic Joe State Bank ===");
+        System.out.println("No other banks exist in this country.");
+        System.out.println("According to Banana Republic laws, all financial transactions are conducted here.");
+        System.out.println("Returning to main menu...");
     }
 }
 
